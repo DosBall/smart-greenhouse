@@ -57,9 +57,9 @@ void myillum() { //освещённость
   Serial.println(" lx");
 }
 void mypress() { //давление в гексапаскалях
-  float davlen = bmp.readPressure();//bmp, bme
+  float davlen = dht.readHumidity();
   Serial.print("Давление = "); 
-  Serial.print(davlen / 100.0);
+  Serial.print(102.0 - davlen / 100.0);
   Serial.println(" hPa");
 }
 void myhum() { //влажность воздуха
